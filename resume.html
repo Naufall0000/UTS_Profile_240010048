@@ -1,0 +1,1635 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Komputasi Awan | Naufal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ==============================
+           RESUME KOMPUTASI AWAN
+        ============================== */
+
+        .cloud-resume {
+            background: var(--bg-color, #f8fafc);
+            color: var(--text-color, #222);
+            padding-bottom: 60px;
+        }
+
+        .cloud-hero {
+            min-height: 420px;
+            padding: 110px 8% 80px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #101d35, #176b87);
+            color: white;
+        }
+
+        .cloud-hero-content {
+            max-width: 850px;
+        }
+
+        .cloud-hero .eyebrow {
+            color: #80e1e9;
+            font-weight: 600;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .cloud-hero h1 {
+            font-size: clamp(36px, 6vw, 58px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .cloud-hero h1 span {
+            color: #80e1e9;
+        }
+
+        .cloud-hero p {
+            max-width: 700px;
+            line-height: 1.8;
+            color: #e0edf3;
+        }
+
+        .cloud-section {
+            width: min(1100px, 90%);
+            margin: 75px auto;
+        }
+
+        .cloud-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .cloud-heading .eyebrow {
+            color: #16849b;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+
+        .cloud-heading h2 {
+            font-size: clamp(27px, 4vw, 38px);
+            margin: 10px 0;
+        }
+
+        .cloud-heading p {
+            line-height: 1.7;
+            color: #777;
+        }
+
+        .meeting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .meeting-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 14px;
+            padding: 23px;
+            transition: 0.25s ease;
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-5px);
+            border-color: #16849b;
+            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        }
+
+        .meeting-card .number {
+            color: #16849b;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .meeting-card h3 {
+            font-size: 18px;
+            margin: 12px 0 8px;
+        }
+
+        .meeting-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .meeting-card .link-text {
+            display: inline-block;
+            margin-top: 12px;
+            color: #16849b;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .meeting-content {
+            margin-top: 55px;
+        }
+
+        .material-card {
+            background: white;
+            border: 1px solid #e5eaf0;
+            border-radius: 16px;
+            padding: clamp(22px, 4vw, 38px);
+            margin-bottom: 30px;
+            scroll-margin-top: 100px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.035);
+        }
+
+        .material-title {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            margin-bottom: 25px;
+        }
+
+        .material-number {
+            min-width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: #e5f5f7;
+            color: #087b91;
+            font-weight: 800;
+            font-size: 22px;
+        }
+
+        .material-title small {
+            color: #16849b;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .material-title h3 {
+            margin: 5px 0 0;
+            font-size: 23px;
+        }
+
+        .material-card p {
+            line-height: 1.85;
+            color: #555;
+            margin: 13px 0;
+        }
+
+        .material-card h4 {
+            margin: 27px 0 12px;
+            color: #173b55;
+            font-size: 18px;
+        }
+
+        .material-card ul,
+        .material-card ol {
+            padding-left: 24px;
+            color: #555;
+            line-height: 1.9;
+        }
+
+        .material-card li {
+            margin-bottom: 9px;
+        }
+
+        .material-card strong {
+            color: #203e54;
+        }
+
+        .example-box {
+            background: #eef8fa;
+            border-left: 4px solid #16849b;
+            padding: 17px 20px;
+            margin: 22px 0;
+            border-radius: 5px 10px 10px 5px;
+        }
+
+        .example-box p {
+            margin: 6px 0;
+        }
+
+        .conclusion-box {
+            background: #f1f5f9;
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-top: 25px;
+            line-height: 1.8;
+            color: #425466;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 13px;
+            border: 1px solid #e0e7ed;
+            text-align: left;
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .comparison-table th {
+            background: #eaf4f7;
+            color: #173b55;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 22px 0;
+        }
+
+        .service-item {
+            border: 1px solid #e1e8ed;
+            border-radius: 12px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .service-item h4 {
+            margin-top: 0;
+        }
+
+        .service-item p {
+            font-size: 14px;
+        }
+
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0 !important;
+        }
+
+        .step-list li {
+            counter-increment: step;
+            position: relative;
+            padding: 5px 0 15px 48px;
+        }
+
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #16849b;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+        }
+
+        .screenshot-placeholder {
+            border: 2px dashed #9eb8c5;
+            background: #f6fafb;
+            border-radius: 12px;
+            padding: 28px 20px;
+            margin: 15px 0;
+            text-align: center;
+            color: #607783;
+        }
+
+        .screenshot-placeholder strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .final-conclusion {
+            background: linear-gradient(135deg, #101d35, #176b87);
+            color: white;
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .final-conclusion h3 {
+            color: #80e1e9;
+            margin-top: 0;
+        }
+
+        .final-conclusion p {
+            color: #e0edf3;
+            line-height: 1.9;
+        }
+
+        .back-top {
+            display: inline-block;
+            margin-top: 15px;
+            color: #16849b;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            .cloud-hero {
+                padding: 100px 6% 65px;
+                min-height: 360px;
+            }
+
+            .cloud-section {
+                width: 92%;
+                margin: 55px auto;
+            }
+
+            .material-title h3 {
+                font-size: 19px;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                white-space: normal;
+            }
+
+            .final-conclusion {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">NAUFAL<span>.</span></div>
+
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="resume.html" class="resume-btn active">Resume</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+    <main class="cloud-resume">
+
+        <!-- HERO -->
+        <section class="cloud-hero">
+            <div class="cloud-hero-content">
+                <p class="eyebrow">MY LEARNING JOURNEY</p>
+
+                <h1>
+                    Resume Materi<br>
+                    <span>Komputasi Awan</span>
+                </h1>
+
+                <p>
+                    Rangkuman pembelajaran mata kuliah Komputasi Awan
+                    dari pertemuan 1 sampai 7. Materi disusun berdasarkan
+                    catatan tugas perkuliahan dan RPS, mulai dari jenis
+                    layanan cloud, aplikasi SaaS, layanan kasir digital,
+                    hingga penggunaan hosting untuk website.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- DAFTAR PERTEMUAN -->
+        <section class="cloud-section" id="daftar-materi">
+
+            <div class="cloud-heading">
+                <p class="eyebrow">MATERI PERKULIAHAN</p>
+                <h2>Daftar Pertemuan</h2>
+                <p>
+                    Pilih salah satu pertemuan untuk membaca
+                    penjelasan materi dan tugas yang dibahas.
+                </p>
+            </div>
+
+            <div class="meeting-grid">
+
+                <a href="#materi1" class="meeting-card">
+                    <span class="number">01</span>
+                    <h3>Jenis Layanan Cloud</h3>
+                    <p>Mengenal IaaS, PaaS, dan SaaS beserta contoh penggunaannya.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi2" class="meeting-card">
+                    <span class="number">02</span>
+                    <h3>Kelemahan Cloud</h3>
+                    <p>Memahami risiko dan kekurangan ketika menggunakan aplikasi cloud.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi3" class="meeting-card">
+                    <span class="number">03</span>
+                    <h3>Keuntungan dan Kekurangan SaaS</h3>
+                    <p>Membahas penggunaan SaaS dengan contoh Moka POS.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi4" class="meeting-card">
+                    <span class="number">04</span>
+                    <h3>Contoh SaaS di Berbagai Bidang</h3>
+                    <p>Contoh aplikasi untuk hotel, rumah sakit, dan kuliner.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi5" class="meeting-card">
+                    <span class="number">05</span>
+                    <h3>Layanan IaaS untuk Web Server</h3>
+                    <p>Mengenal layanan infrastruktur cloud untuk hosting website.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi6" class="meeting-card">
+                    <span class="number">06</span>
+                    <h3>Praktik Web Hosting Gratis</h3>
+                    <p>Mengunggah website profil ke layanan hosting gratis.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+                <a href="#materi7" class="meeting-card">
+                    <span class="number">07</span>
+                    <h3>Deployment dan Pengelolaan Cloud</h3>
+                    <p>Mengenal VM, container, serverless, dan pengelolaan aplikasi.</p>
+                    <span class="link-text">Baca materi →</span>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- PENJELASAN MATERI -->
+        <section class="cloud-section meeting-content">
+
+            <div class="cloud-heading">
+                <p class="eyebrow">CATATAN DAN PEMBAHASAN</p>
+                <h2>Penjelasan Materi</h2>
+                <p>
+                    Penjelasan berikut disusun dari soal tugas
+                    dan pembahasan selama perkuliahan.
+                </p>
+            </div>
+
+
+            <!-- PERTEMUAN 1 -->
+            <article class="material-card" id="materi1">
+
+                <div class="material-title">
+                    <div class="material-number">01</div>
+                    <div>
+                        <small>PERTEMUAN 1</small>
+                        <h3>Jenis Layanan dalam Cloud Computing</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan pertama, tugas yang diberikan adalah
+                    mencari dan menjelaskan layanan apa saja yang tersedia
+                    dalam cloud computing. Secara umum, layanan cloud
+                    dapat dikelompokkan menjadi tiga jenis utama, yaitu
+                    Infrastructure as a Service (IaaS), Platform as a
+                    Service (PaaS), dan Software as a Service (SaaS).
+                </p>
+
+                <h4>1. Infrastructure as a Service (IaaS)</h4>
+
+                <p>
+                    IaaS adalah layanan cloud yang menyediakan
+                    infrastruktur komputasi dasar melalui internet.
+                    Infrastruktur tersebut dapat berupa server virtual,
+                    jaringan, dan ruang penyimpanan data.
+                </p>
+
+                <p>
+                    Dengan IaaS, pengguna bisa menyewa server tanpa
+                    harus membeli komputer server fisik sendiri.
+                    Pengguna juga memiliki kendali untuk mengatur
+                    sistem operasi, konfigurasi jaringan, dan aplikasi
+                    yang akan dijalankan. Sementara perangkat fisiknya
+                    tetap dikelola oleh penyedia layanan cloud.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh layanan IaaS:</strong>
+                    <ul>
+                        <li><strong>Amazon EC2:</strong> Menyediakan server virtual yang dapat digunakan untuk menjalankan website dan aplikasi.</li>
+                        <li><strong>Google Compute Engine:</strong> Menyediakan mesin virtual yang berjalan di infrastruktur Google Cloud.</li>
+                        <li><strong>Microsoft Azure Virtual Machines:</strong> Menyediakan komputer virtual dengan pilihan sistem operasi dan spesifikasi tertentu.</li>
+                        <li><strong>DigitalOcean Droplets:</strong> Menyediakan server virtual yang dapat digunakan untuk hosting website dan aplikasi.</li>
+                    </ul>
+                </div>
+
+                <h4>2. Platform as a Service (PaaS)</h4>
+
+                <p>
+                    PaaS merupakan layanan cloud yang menyediakan
+                    platform siap pakai untuk mengembangkan,
+                    menguji, dan menjalankan aplikasi. Pengguna
+                    tidak perlu repot mengurus seluruh kebutuhan
+                    server dan sistem operasi karena sebagian besar
+                    pengelolaannya sudah ditangani penyedia layanan.
+                </p>
+
+                <p>
+                    Contohnya, seorang programmer ingin membuat
+                    aplikasi berbasis web. Dengan PaaS, programmer
+                    dapat lebih fokus menulis kode dan mengembangkan
+                    fitur aplikasi tanpa harus mengatur server
+                    dari awal.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh layanan PaaS:</strong>
+                    <ul>
+                        <li><strong>Google App Engine:</strong> Platform untuk menjalankan aplikasi tanpa mengelola server secara langsung.</li>
+                        <li><strong>Heroku:</strong> Platform untuk melakukan deployment aplikasi web.</li>
+                        <li><strong>Azure App Service:</strong> Layanan untuk membangun dan menjalankan aplikasi web di Microsoft Azure.</li>
+                        <li><strong>Vercel:</strong> Platform deployment yang banyak digunakan untuk website dan aplikasi frontend.</li>
+                    </ul>
+                </div>
+
+                <h4>3. Software as a Service (SaaS)</h4>
+
+                <p>
+                    SaaS adalah layanan berupa aplikasi atau perangkat
+                    lunak yang sudah siap digunakan melalui internet.
+                    Pengguna tidak perlu menginstal dan mengelola
+                    server aplikasi sendiri karena penyedia layanan
+                    bertanggung jawab terhadap infrastruktur dan
+                    pemeliharaan sistemnya.
+                </p>
+
+                <p>
+                    Contohnya, ketika kita menggunakan Gmail,
+                    Google Drive, atau Microsoft 365, kita hanya
+                    perlu masuk ke akun dan menggunakan fitur
+                    yang tersedia. Kita tidak perlu mengurus
+                    server tempat aplikasi tersebut berjalan.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh layanan SaaS:</strong>
+                    <ul>
+                        <li><strong>Google Workspace:</strong> Gmail, Google Docs, dan Google Drive.</li>
+                        <li><strong>Microsoft 365:</strong> Word, Excel, PowerPoint, dan layanan kolaborasi.</li>
+                        <li><strong>Canva:</strong> Aplikasi desain grafis berbasis web.</li>
+                        <li><strong>Zoom:</strong> Aplikasi untuk pertemuan dan komunikasi online.</li>
+                        <li><strong>Moka POS:</strong> Aplikasi kasir digital berbasis cloud untuk membantu bisnis mengelola transaksi penjualan.</li>
+                    </ul>
+                </div>
+
+                <h4>Perbedaan IaaS, PaaS, dan SaaS</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Jenis</th>
+                            <th>Fungsi Utama</th>
+                            <th>Contoh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IaaS</td>
+                            <td>Menyediakan infrastruktur seperti server, jaringan, dan penyimpanan.</td>
+                            <td>AWS EC2, Google Compute Engine.</td>
+                        </tr>
+                        <tr>
+                            <td>PaaS</td>
+                            <td>Menyediakan platform untuk mengembangkan dan menjalankan aplikasi.</td>
+                            <td>Heroku, Google App Engine.</td>
+                        </tr>
+                        <tr>
+                            <td>SaaS</td>
+                            <td>Menyediakan aplikasi siap pakai melalui internet.</td>
+                            <td>Gmail, Canva, Moka POS.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Ketiga jenis layanan tersebut memiliki fungsi
+                    yang berbeda. IaaS lebih berfokus pada penyediaan
+                    infrastruktur, PaaS menyediakan platform untuk
+                    pengembangan aplikasi, sedangkan SaaS menyediakan
+                    aplikasi yang langsung dapat digunakan oleh pengguna.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 2 -->
+            <article class="material-card" id="materi2">
+
+                <div class="material-title">
+                    <div class="material-number">02</div>
+                    <div>
+                        <small>PERTEMUAN 2</small>
+                        <h3>Kelemahan Menggunakan Layanan Cloud</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan kedua, tugas yang diberikan adalah
+                    menjelaskan kelemahan ketika menggunakan layanan
+                    cloud, khususnya saat kita menyewa atau menggunakan
+                    aplikasi yang disediakan oleh pihak lain.
+                </p>
+
+                <p>
+                    Cloud memang memberikan kemudahan karena pengguna
+                    tidak perlu membangun seluruh infrastruktur sendiri.
+                    Namun, ada beberapa kekurangan yang perlu diperhatikan.
+                </p>
+
+                <h4>1. Ketergantungan pada Koneksi Internet</h4>
+
+                <p>
+                    Salah satu kelemahan utama layanan cloud adalah
+                    ketergantungan terhadap internet. Karena aplikasi
+                    dan data diakses melalui jaringan, pengguna
+                    membutuhkan koneksi internet yang stabil.
+                </p>
+
+                <p>
+                    Jika koneksi internet terputus atau mengalami
+                    gangguan, aplikasi bisa menjadi lambat atau
+                    tidak dapat diakses. Hal ini dapat mengganggu
+                    pekerjaan yang sedang dilakukan.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh pada usaha kuliner:</strong>
+                    <p>
+                        Sebuah restoran menggunakan aplikasi kasir
+                        berbasis cloud seperti Moka POS. Ketika koneksi
+                        internet di restoran mengalami gangguan,
+                        beberapa fitur yang membutuhkan koneksi
+                        internet dapat terganggu. Akibatnya, proses
+                        transaksi dan pengelolaan data bisa menjadi
+                        kurang lancar, tergantung fitur dan dukungan
+                        offline dari aplikasinya.
+                    </p>
+                </div>
+
+                <h4>2. Keamanan dan Privasi Data Berada pada Pihak Ketiga</h4>
+
+                <p>
+                    Ketika menggunakan aplikasi cloud, sebagian
+                    atau seluruh data biasanya disimpan pada
+                    infrastruktur milik penyedia layanan.
+                    Artinya, pengguna mempercayakan penyimpanan
+                    dan pengelolaan data kepada pihak ketiga.
+                </p>
+
+                <p>
+                    Kondisi ini dapat menimbulkan risiko jika
+                    penyedia layanan mengalami kebocoran data,
+                    serangan siber, atau gangguan keamanan.
+                    Data penting milik pengguna atau perusahaan
+                    berpotensi disalahgunakan apabila perlindungannya
+                    tidak memadai.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh pada aplikasi kasir:</strong>
+                    <p>
+                        Aplikasi kasir dapat menyimpan informasi
+                        transaksi, data produk, laporan penjualan,
+                        dan informasi bisnis lainnya. Jika sistem
+                        penyedia mengalami kebocoran data,
+                        informasi bisnis tersebut berpotensi
+                        terekspos kepada pihak yang tidak berwenang.
+                    </p>
+                </div>
+
+                <h4>3. Ketergantungan kepada Penyedia Layanan</h4>
+
+                <p>
+                    Pengguna cloud juga bergantung pada kebijakan
+                    dan keberlangsungan penyedia layanan. Jika
+                    penyedia mengubah harga berlangganan,
+                    menghentikan fitur, atau mengalami gangguan,
+                    pengguna harus menyesuaikan diri dengan
+                    perubahan tersebut.
+                </p>
+
+                <h4>4. Biaya Berlangganan yang Terus Berjalan</h4>
+
+                <p>
+                    Beberapa aplikasi cloud menggunakan sistem
+                    pembayaran bulanan atau tahunan. Walaupun
+                    pengguna tidak perlu membeli server sendiri,
+                    biaya langganan tetap harus dibayarkan selama
+                    layanan digunakan.
+                </p>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Layanan cloud memiliki beberapa kelemahan,
+                    seperti ketergantungan internet, risiko keamanan
+                    data, ketergantungan pada penyedia layanan,
+                    dan biaya berlangganan. Oleh karena itu,
+                    sebelum memilih layanan cloud, pengguna
+                    perlu mempertimbangkan kebutuhan dan risikonya.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 3 -->
+            <article class="material-card" id="materi3">
+
+                <div class="material-title">
+                    <div class="material-number">03</div>
+                    <div>
+                        <small>PERTEMUAN 3</small>
+                        <h3>Keuntungan dan Kekurangan SaaS</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan ketiga, pembahasan berfokus pada
+                    Software as a Service atau SaaS. Tugasnya adalah
+                    menjelaskan keuntungan dan kekurangan ketika
+                    menggunakan SaaS untuk aplikasi tertentu.
+                </p>
+
+                <p>
+                    Salah satu contoh yang dekat dengan kehidupan
+                    sehari-hari adalah aplikasi kasir digital
+                    seperti Moka POS. Aplikasi ini digunakan
+                    oleh bisnis, termasuk restoran, kafe,
+                    dan usaha makanan untuk membantu proses
+                    penjualan dan pengelolaan bisnis.
+                </p>
+
+                <h4>Mengenal Moka POS</h4>
+
+                <p>
+                    <strong>Moka POS</strong> merupakan aplikasi
+                    Point of Sale atau sistem kasir digital.
+                    Aplikasi ini membantu pemilik usaha dalam
+                    mencatat transaksi penjualan dan mengelola
+                    kegiatan operasional bisnis.
+                </p>
+
+                <p>
+                    Karena berbasis layanan digital, pemilik usaha
+                    dapat menggunakan sistem tersebut tanpa harus
+                    membangun aplikasi kasir sendiri dari awal.
+                    Data dan pengelolaan bisnis dapat diakses
+                    melalui perangkat yang didukung oleh layanan.
+                </p>
+
+                <h4>Bagaimana Moka POS Memanfaatkan Cloud?</h4>
+
+                <p>
+                    Misalnya, sebuah restoran menggunakan Moka POS
+                    untuk melayani pelanggan. Ketika kasir
+                    memasukkan pesanan dan menyelesaikan transaksi,
+                    informasi penjualan dapat tercatat dalam sistem.
+                    Pemilik usaha kemudian dapat melihat laporan
+                    penjualan melalui dashboard yang disediakan.
+                </p>
+
+                <p>
+                    Dengan sistem berbasis cloud, pemilik usaha
+                    tidak harus berada di depan mesin kasir untuk
+                    memantau seluruh aktivitas bisnis. Selama
+                    memiliki akses dan izin yang sesuai, informasi
+                    dapat dipantau dari perangkat lain.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh penggunaan dalam restoran:</strong>
+                    <ol>
+                        <li>Kasir memasukkan pesanan pelanggan ke aplikasi.</li>
+                        <li>Sistem mencatat transaksi penjualan.</li>
+                        <li>Data transaksi tersimpan dan dikelola oleh sistem.</li>
+                        <li>Pemilik usaha dapat melihat laporan penjualan.</li>
+                        <li>Data tersebut dapat membantu pemilik mengevaluasi perkembangan bisnis.</li>
+                    </ol>
+                </div>
+
+                <h4>Keuntungan Menggunakan SaaS seperti Moka POS</h4>
+
+                <ul>
+                    <li>
+                        <strong>Mudah digunakan:</strong>
+                        Pengguna dapat langsung memakai aplikasi
+                        tanpa harus membuat sistem kasir sendiri.
+                    </li>
+
+                    <li>
+                        <strong>Menghemat biaya awal:</strong>
+                        Pemilik usaha tidak harus membangun
+                        infrastruktur server dan mengembangkan
+                        aplikasi kasir dari awal.
+                    </li>
+
+                    <li>
+                        <strong>Pengelolaan lebih praktis:</strong>
+                        Transaksi dan laporan penjualan dapat
+                        dikelola melalui sistem digital.
+                    </li>
+
+                    <li>
+                        <strong>Akses lebih fleksibel:</strong>
+                        Pemilik usaha dapat memantau informasi
+                        bisnis dari perangkat yang didukung
+                        selama memiliki koneksi dan hak akses.
+                    </li>
+
+                    <li>
+                        <strong>Pembaruan sistem:</strong>
+                        Pembaruan aplikasi dan pemeliharaan
+                        layanan umumnya ditangani penyedia.
+                    </li>
+                </ul>
+
+                <h4>Kekurangan Menggunakan SaaS seperti Moka POS</h4>
+
+                <ul>
+                    <li>
+                        <strong>Bergantung pada internet:</strong>
+                        Gangguan koneksi dapat memengaruhi
+                        akses ke fitur yang membutuhkan internet.
+                    </li>
+
+                    <li>
+                        <strong>Biaya berlangganan:</strong>
+                        Pengguna perlu membayar biaya layanan
+                        sesuai paket yang digunakan.
+                    </li>
+
+                    <li>
+                        <strong>Ketergantungan pada penyedia:</strong>
+                        Pengguna harus mengikuti kebijakan
+                        dan ketentuan layanan dari penyedia aplikasi.
+                    </li>
+
+                    <li>
+                        <strong>Risiko keamanan data:</strong>
+                        Informasi transaksi dan data bisnis
+                        perlu dilindungi dengan baik.
+                    </li>
+
+                    <li>
+                        <strong>Keterbatasan penyesuaian:</strong>
+                        Pengguna tidak selalu bisa mengubah
+                        seluruh fitur aplikasi sesuai keinginan
+                        karena sistem dikembangkan oleh penyedia.
+                    </li>
+                </ul>
+
+                <h4>Ringkasan Keuntungan dan Kekurangan</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Keuntungan</th>
+                            <th>Kekurangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mudah digunakan dan praktis.</td>
+                            <td>Membutuhkan koneksi internet untuk fitur online.</td>
+                        </tr>
+                        <tr>
+                            <td>Mengurangi kebutuhan membangun server sendiri.</td>
+                            <td>Ada biaya berlangganan.</td>
+                        </tr>
+                        <tr>
+                            <td>Laporan bisnis lebih mudah dipantau.</td>
+                            <td>Bergantung pada penyedia layanan.</td>
+                        </tr>
+                        <tr>
+                            <td>Pemeliharaan sistem ditangani penyedia.</td>
+                            <td>Pengaturan fitur bisa memiliki batasan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Moka POS merupakan contoh penerapan SaaS
+                    dalam dunia bisnis. Penggunaan aplikasi
+                    berbasis cloud dapat membantu kegiatan
+                    operasional restoran menjadi lebih praktis.
+                    Namun, pemilik usaha tetap perlu memperhatikan
+                    biaya, koneksi internet, dan keamanan data.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 4 -->
+            <article class="material-card" id="materi4">
+
+                <div class="material-title">
+                    <div class="material-number">04</div>
+                    <div>
+                        <small>PERTEMUAN 4</small>
+                        <h3>Contoh SaaS di Bidang Hotel, Rumah Sakit, dan Kuliner</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan keempat, tugas yang diberikan
+                    adalah mencari contoh aplikasi SaaS dalam
+                    tiga bidang, yaitu hotel, rumah sakit,
+                    dan kuliner. Selain mencari contoh aplikasinya,
+                    kita juga perlu memahami kelebihan dan
+                    kekurangan penggunaannya.
+                </p>
+
+                <h4>1. Bidang Hotel dan Reservasi</h4>
+
+                <p>
+                    Dalam bidang perhotelan, SaaS dapat digunakan
+                    untuk mengelola pemesanan kamar, data tamu,
+                    ketersediaan kamar, pembayaran, dan laporan
+                    operasional hotel.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh aplikasi: Cloudbeds</strong>
+                    <p>
+                        Cloudbeds merupakan platform pengelolaan
+                        bisnis perhotelan yang menyediakan fitur
+                        untuk membantu pengelolaan reservasi,
+                        kamar, dan operasional penginapan.
+                        Sistem berbasis cloud membantu pengelola
+                        hotel mengakses informasi melalui
+                        platform yang disediakan.
+                    </p>
+                </div>
+
+                <p><strong>Kelebihan:</strong></p>
+                <ul>
+                    <li>Mempermudah pengelolaan reservasi kamar.</li>
+                    <li>Membantu memperbarui informasi ketersediaan kamar.</li>
+                    <li>Data operasional dapat dikelola dalam satu sistem.</li>
+                    <li>Membantu mengurangi pencatatan manual.</li>
+                </ul>
+
+                <p><strong>Kekurangan:</strong></p>
+                <ul>
+                    <li>Membutuhkan koneksi internet untuk akses layanan online.</li>
+                    <li>Pengguna perlu membayar biaya sesuai paket layanan.</li>
+                    <li>Staf hotel perlu mempelajari penggunaan sistem.</li>
+                    <li>Data tamu harus dijaga agar tidak disalahgunakan.</li>
+                </ul>
+
+
+                <h4>2. Bidang Rumah Sakit</h4>
+
+                <p>
+                    Dalam bidang kesehatan, aplikasi SaaS dapat
+                    membantu pengelolaan administrasi rumah sakit,
+                    pendaftaran pasien, jadwal pemeriksaan,
+                    dan pengelolaan informasi pelayanan.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh aplikasi: Sistem Informasi Manajemen Rumah Sakit (SIMRS) berbasis cloud</strong>
+                    <p>
+                        SIMRS berbasis cloud merupakan sistem
+                        yang digunakan untuk membantu pengelolaan
+                        informasi rumah sakit. Contohnya dapat
+                        mencakup pendaftaran pasien, jadwal dokter,
+                        administrasi, dan informasi pelayanan.
+                        Salah satu contoh platform yang dikenal
+                        dalam pengelolaan rumah sakit adalah
+                        <strong>eHospital</strong>.
+                    </p>
+                    <p>
+                        Fitur dan model penyediaan setiap produk
+                        dapat berbeda. Tidak semua SIMRS atau
+                        eHospital otomatis merupakan SaaS,
+                        sehingga perlu diperiksa berdasarkan
+                        layanan yang digunakan.
+                    </p>
+                </div>
+
+                <p><strong>Kelebihan:</strong></p>
+                <ul>
+                    <li>Membantu mengelola data administrasi pasien.</li>
+                    <li>Mempermudah proses pendaftaran dan pengaturan jadwal.</li>
+                    <li>Mengurangi pencatatan data secara manual.</li>
+                    <li>Informasi dapat dikelola dalam sistem terpusat.</li>
+                </ul>
+
+                <p><strong>Kekurangan:</strong></p>
+                <ul>
+                    <li>Data pasien merupakan informasi yang sangat sensitif.</li>
+                    <li>Keamanan dan hak akses harus dikelola dengan ketat.</li>
+                    <li>Gangguan sistem dapat menghambat pelayanan.</li>
+                    <li>Rumah sakit perlu memastikan sistem sesuai kebutuhan dan aturan yang berlaku.</li>
+                </ul>
+
+
+                <h4>3. Bidang Kuliner dan Restoran</h4>
+
+                <p>
+                    Dalam bidang kuliner, SaaS dapat digunakan
+                    untuk mengelola transaksi kasir, menu makanan,
+                    stok bahan atau produk, laporan penjualan,
+                    dan aktivitas operasional restoran.
+                </p>
+
+                <div class="example-box">
+                    <strong>Contoh aplikasi: Moka POS</strong>
+                    <p>
+                        Moka POS merupakan aplikasi kasir digital
+                        yang membantu pemilik restoran atau usaha
+                        makanan mencatat transaksi, mengelola
+                        produk, dan memantau laporan penjualan.
+                    </p>
+                    <p>
+                        Contohnya, ketika pelanggan membeli makanan,
+                        kasir memasukkan pesanan ke aplikasi.
+                        Transaksi kemudian dicatat dalam sistem
+                        sehingga pemilik usaha dapat memantau
+                        hasil penjualan.
+                    </p>
+                </div>
+
+                <p><strong>Kelebihan:</strong></p>
+                <ul>
+                    <li>Mempercepat pencatatan transaksi pelanggan.</li>
+                    <li>Membantu pemilik usaha memantau penjualan.</li>
+                    <li>Mengurangi kesalahan pencatatan manual.</li>
+                    <li>Mempermudah pengelolaan produk dan laporan bisnis.</li>
+                </ul>
+
+                <p><strong>Kekurangan:</strong></p>
+                <ul>
+                    <li>Beberapa fitur membutuhkan koneksi internet.</li>
+                    <li>Pengguna harus membayar biaya berlangganan.</li>
+                    <li>Data transaksi dan bisnis perlu dijaga keamanannya.</li>
+                    <li>Pengguna bergantung pada ketersediaan layanan penyedia.</li>
+                </ul>
+
+
+                <h4>Perbandingan Penggunaan SaaS</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Bidang</th>
+                            <th>Contoh Sistem</th>
+                            <th>Fungsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hotel</td>
+                            <td>Cloudbeds</td>
+                            <td>Mengelola reservasi, kamar, dan operasional hotel.</td>
+                        </tr>
+                        <tr>
+                            <td>Rumah Sakit</td>
+                            <td>SIMRS berbasis cloud</td>
+                            <td>Mengelola administrasi, pendaftaran, dan informasi pelayanan.</td>
+                        </tr>
+                        <tr>
+                            <td>Kuliner</td>
+                            <td>Moka POS</td>
+                            <td>Mengelola kasir, transaksi, dan laporan penjualan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    SaaS dapat digunakan dalam berbagai bidang
+                    pekerjaan. Hotel menggunakannya untuk
+                    mengelola reservasi, rumah sakit untuk
+                    membantu pengelolaan informasi pelayanan,
+                    dan bisnis kuliner untuk mengelola transaksi
+                    serta kegiatan kasir. Setiap aplikasi
+                    memberikan kemudahan, tetapi tetap memiliki
+                    risiko dan keterbatasan.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 5 -->
+            <article class="material-card" id="materi5">
+
+                <div class="material-title">
+                    <div class="material-number">05</div>
+                    <div>
+                        <small>PERTEMUAN 5</small>
+                        <h3>Layanan IaaS untuk Web Server</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan kelima dan keenam, tugas yang
+                    diberikan berkaitan dengan pencarian layanan
+                    IaaS yang disediakan oleh penyedia cloud melalui
+                    internet, khususnya layanan infrastruktur
+                    yang berhubungan dengan server web atau hosting.
+                </p>
+
+                <p>
+                    Sebelum mencari contoh layanannya, kita perlu
+                    memahami bahwa web server merupakan sistem
+                    yang bertugas menerima permintaan dari browser
+                    dan mengirimkan halaman website kepada pengguna.
+                </p>
+
+                <p>
+                    Dengan menggunakan IaaS, kita dapat menyewa
+                    server virtual untuk memasang web server,
+                    mengatur sistem operasi, dan menjalankan
+                    website sendiri.
+                </p>
+
+                <h4>1. Amazon EC2 - Amazon Web Services</h4>
+
+                <div class="example-box">
+                    <strong>Website penyedia:</strong>
+                    <p>https://aws.amazon.com/ec2/</p>
+                </div>
+
+                <p>
+                    Amazon EC2 merupakan layanan server virtual
+                    dari AWS. Pengguna dapat memilih spesifikasi
+                    server seperti jumlah CPU, kapasitas RAM,
+                    sistem operasi, dan penyimpanan.
+                </p>
+
+                <p>
+                    EC2 dapat digunakan untuk memasang web server
+                    seperti Apache atau Nginx, kemudian menjalankan
+                    website yang ingin dipublikasikan ke internet.
+                </p>
+
+                <h4>2. Google Compute Engine - Google Cloud</h4>
+
+                <div class="example-box">
+                    <strong>Website penyedia:</strong>
+                    <p>https://cloud.google.com/compute</p>
+                </div>
+
+                <p>
+                    Google Compute Engine adalah layanan
+                    infrastruktur yang menyediakan mesin virtual
+                    di Google Cloud. Pengguna dapat membuat
+                    server virtual dan mengatur sistem operasi
+                    serta kebutuhan aplikasi yang akan dijalankan.
+                </p>
+
+                <p>
+                    Salah satu penggunaannya adalah membuat
+                    server untuk menjalankan website, aplikasi
+                    web, maupun layanan backend.
+                </p>
+
+                <h4>3. Microsoft Azure Virtual Machines</h4>
+
+                <div class="example-box">
+                    <strong>Website penyedia:</strong>
+                    <p>https://azure.microsoft.com/products/virtual-machines</p>
+                </div>
+
+                <p>
+                    Azure Virtual Machines merupakan layanan
+                    mesin virtual dari Microsoft Azure.
+                    Pengguna dapat memilih sistem operasi,
+                    kapasitas komputasi, dan konfigurasi
+                    server sesuai kebutuhan.
+                </p>
+
+                <p>
+                    Server tersebut dapat digunakan untuk
+                    memasang aplikasi web server dan
+                    menghosting website.
+                </p>
+
+                <h4>Perbandingan Ketiga Layanan</h4>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Layanan</th>
+                            <th>Penyedia</th>
+                            <th>Kegunaan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amazon EC2</td>
+                            <td>Amazon Web Services</td>
+                            <td>Menyediakan server virtual untuk website dan aplikasi.</td>
+                        </tr>
+                        <tr>
+                            <td>Compute Engine</td>
+                            <td>Google Cloud</td>
+                            <td>Menyediakan mesin virtual untuk menjalankan web server.</td>
+                        </tr>
+                        <tr>
+                            <td>Azure Virtual Machines</td>
+                            <td>Microsoft Azure</td>
+                            <td>Menyediakan server virtual dengan konfigurasi sesuai kebutuhan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Amazon EC2, Google Compute Engine, dan Azure
+                    Virtual Machines merupakan contoh layanan IaaS.
+                    Ketiganya menyediakan server virtual yang dapat
+                    dikonfigurasi dan digunakan untuk menjalankan
+                    web server maupun aplikasi.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 6 -->
+            <article class="material-card" id="materi6">
+
+                <div class="material-title">
+                    <div class="material-number">06</div>
+                    <div>
+                        <small>PERTEMUAN 6</small>
+                        <h3>Praktik Mengunggah Website ke Hosting Gratis</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan keenam, tugas praktik yang
+                    diberikan adalah melakukan registrasi pada
+                    layanan web hosting gratis, kemudian mengunggah
+                    satu halaman website profil yang sudah dibuat.
+                </p>
+
+                <p>
+                    Hosting adalah layanan yang menyediakan tempat
+                    untuk menyimpan file website agar dapat diakses
+                    melalui internet. File website seperti HTML,
+                    CSS, JavaScript, dan gambar perlu ditempatkan
+                    pada layanan hosting supaya orang lain dapat
+                    membuka website melalui alamat yang diberikan.
+                </p>
+
+                <h4>Contoh Layanan Hosting Gratis</h4>
+
+                <div class="service-grid">
+
+                    <div class="service-item">
+                        <h4>1. GitHub Pages</h4>
+                        <p>
+                            Layanan hosting gratis dari GitHub
+                            yang dapat digunakan untuk menerbitkan
+                            website statis berbasis HTML, CSS,
+                            dan JavaScript.
+                        </p>
+                        <a href="https://pages.github.com/" target="_blank">
+                            Kunjungi GitHub Pages
+                        </a>
+                    </div>
+
+                    <div class="service-item">
+                        <h4>2. Netlify</h4>
+                        <p>
+                            Platform yang menyediakan hosting
+                            untuk website statis dan mendukung
+                            deployment melalui repository Git
+                            maupun unggahan file.
+                        </p>
+                        <a href="https://www.netlify.com/" target="_blank">
+                            Kunjungi Netlify
+                        </a>
+                    </div>
+
+                    <div class="service-item">
+                        <h4>3. Vercel</h4>
+                        <p>
+                            Platform deployment untuk website
+                            dan aplikasi web. Banyak digunakan
+                            untuk proyek frontend dan website
+                            statis.
+                        </p>
+                        <a href="https://vercel.com/" target="_blank">
+                            Kunjungi Vercel
+                        </a>
+                    </div>
+
+                </div>
+
+                <p>
+                    Ketiga layanan tersebut dapat digunakan untuk
+                    mempublikasikan website profil sederhana.
+                    Namun, perlu dipahami bahwa GitHub Pages,
+                    Netlify, dan Vercel merupakan platform hosting
+                    atau deployment, bukan layanan IaaS seperti
+                    Amazon EC2 dan Google Compute Engine.
+                </p>
+
+                <h4>Langkah Umum Mengunggah Website Profil</h4>
+
+                <ol class="step-list">
+                    <li>
+                        <strong>Menyiapkan file website.</strong>
+                        Pastikan file HTML, CSS, JavaScript,
+                        dan folder gambar sudah tersusun dengan benar.
+                    </li>
+
+                    <li>
+                        <strong>Membuat akun hosting.</strong>
+                        Daftar pada salah satu layanan hosting
+                        yang akan digunakan, misalnya Netlify,
+                        GitHub Pages, atau Vercel.
+                    </li>
+
+                    <li>
+                        <strong>Mengunggah atau menghubungkan project.</strong>
+                        Masukkan file website atau hubungkan
+                        repository GitHub sesuai metode deployment
+                        yang disediakan platform.
+                    </li>
+
+                    <li>
+                        <strong>Melakukan proses deployment.</strong>
+                        Tunggu sampai platform selesai memproses
+                        file website dan menerbitkannya.
+                    </li>
+
+                    <li>
+                        <strong>Mendapatkan alamat website.</strong>
+                        Setelah berhasil, platform akan memberikan
+                        alamat URL yang dapat digunakan untuk
+                        membuka website melalui browser.
+                    </li>
+
+                    <li>
+                        <strong>Melakukan pengecekan.</strong>
+                        Buka alamat website dan pastikan halaman,
+                        gambar, CSS, serta JavaScript tampil
+                        dengan benar.
+                    </li>
+                </ol>
+
+                <h4>Perbedaan IaaS dan Hosting Website Gratis</h4>
+
+                <p>
+                    Walaupun sama-sama dapat digunakan untuk
+                    menjalankan website, IaaS dan platform
+                    hosting gratis memiliki perbedaan.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>IaaS:</strong>
+                        Pengguna mendapatkan server virtual
+                        dan memiliki kendali lebih besar terhadap
+                        sistem operasi serta konfigurasi server.
+                    </li>
+
+                    <li>
+                        <strong>Hosting terkelola:</strong>
+                        Pengguna lebih fokus mengunggah dan
+                        menerbitkan website karena pengelolaan
+                        server sebagian besar ditangani penyedia.
+                    </li>
+                </ul>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Hosting memungkinkan website dipublikasikan
+                    sehingga dapat diakses oleh orang lain melalui
+                    internet. Untuk website profil sederhana,
+                    layanan seperti GitHub Pages, Netlify,
+                    dan Vercel dapat menjadi pilihan yang praktis.
+                </div>
+
+            </article>
+
+
+            <!-- PERTEMUAN 7 -->
+            <article class="material-card" id="materi7">
+
+                <div class="material-title">
+                    <div class="material-number">07</div>
+                    <div>
+                        <small>PERTEMUAN 7</small>
+                        <h3>Deployment dan Pengelolaan Aplikasi Cloud</h3>
+                    </div>
+                </div>
+
+                <p>
+                    Pada pertemuan ketujuh, materi membahas
+                    bagaimana aplikasi dijalankan dan dikelola
+                    dalam lingkungan cloud. Setelah memahami
+                    jenis layanan cloud dan cara mempublikasikan
+                    website, kita juga perlu mengenal teknologi
+                    yang digunakan untuk menjalankan aplikasi
+                    dengan lebih fleksibel.
+                </p>
+
+                <h4>1. Virtual Machine (VM)</h4>
+
+                <p>
+                    Virtual Machine merupakan komputer virtual
+                    yang berjalan di atas perangkat keras fisik.
+                    VM memiliki sumber daya seperti CPU, RAM,
+                    penyimpanan, dan sistem operasi sendiri.
+                </p>
+
+                <p>
+                    Dalam cloud computing, pengguna dapat
+                    menyewa VM dari penyedia cloud untuk
+                    menjalankan website, database, maupun
+                    aplikasi lainnya.
+                </p>
+
+                <h4>2. Container</h4>
+
+                <p>
+                    Container merupakan teknologi untuk
+                    mengemas aplikasi beserta kebutuhan
+                    pendukungnya agar dapat dijalankan secara
+                    konsisten di berbagai lingkungan.
+                    Salah satu teknologi container yang
+                    banyak digunakan adalah Docker.
+                </p>
+
+                <h4>3. Kubernetes</h4>
+
+                <p>
+                    Kubernetes merupakan platform untuk
+                    mengelola container. Teknologi ini membantu
+                    mengatur deployment, jumlah container,
+                    dan pengelolaan aplikasi yang berjalan
+                    dalam skala besar.
+                </p>
+
+                <h4>4. Serverless</h4>
+
+                <p>
+                    Serverless merupakan model layanan yang
+                    memungkinkan pengembang menjalankan
+                    kode atau fungsi tanpa harus mengelola
+                    server secara langsung.
+                </p>
+
+                <p>
+                    Contoh layanan serverless antara lain
+                    AWS Lambda, Google Cloud Functions,
+                    dan Azure Functions.
+                </p>
+
+                <h4>5. Scaling dan Load Balancing</h4>
+
+                <ul>
+                    <li>
+                        <strong>Scalability:</strong>
+                        Kemampuan sistem menyesuaikan kapasitas
+                        sesuai kebutuhan pengguna.
+                    </li>
+
+                    <li>
+                        <strong>Auto-scaling:</strong>
+                        Proses menambah atau mengurangi
+                        sumber daya secara otomatis berdasarkan
+                        kondisi sistem.
+                    </li>
+
+                    <li>
+                        <strong>Load Balancing:</strong>
+                        Membagi permintaan pengguna ke beberapa
+                        server agar beban kerja lebih merata.
+                    </li>
+
+                    <li>
+                        <strong>Cost Optimization:</strong>
+                        Mengatur penggunaan sumber daya cloud
+                        agar biaya tetap efisien.
+                    </li>
+                </ul>
+
+                <div class="example-box">
+                    <strong>Contoh penerapan:</strong>
+                    <p>
+                        Sebuah website toko online mengalami
+                        peningkatan jumlah pengunjung ketika
+                        ada promosi. Jika hanya menggunakan
+                        satu server, server tersebut bisa
+                        mengalami beban yang tinggi.
+                    </p>
+                    <p>
+                        Dengan bantuan load balancing,
+                        permintaan pengguna dapat dibagi
+                        ke beberapa server. Sementara itu,
+                        auto-scaling dapat membantu menambah
+                        kapasitas ketika kebutuhan meningkat.
+                    </p>
+                </div>
+
+                <div class="conclusion-box">
+                    <strong>Kesimpulan:</strong>
+                    Teknologi VM, container, Kubernetes,
+                    dan serverless memberikan pilihan
+                    untuk menjalankan aplikasi di cloud.
+                    Dengan deployment, scaling, dan
+                    pengelolaan sumber daya, aplikasi
+                    dapat berjalan lebih fleksibel
+                    sesuai kebutuhan.
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- KESIMPULAN AKHIR -->
+        <section class="cloud-section">
+
+            <div class="final-conclusion">
+                <h3>Kesimpulan Pembelajaran Komputasi Awan</h3>
+
+                <p>
+                    Dari pertemuan pertama sampai pertemuan ketujuh,
+                    dapat dipahami bahwa cloud computing merupakan
+                    teknologi yang menyediakan berbagai layanan
+                    komputasi melalui internet. Layanan tersebut
+                    tidak hanya digunakan untuk menyimpan data,
+                    tetapi juga dapat dimanfaatkan untuk menjalankan
+                    server, aplikasi, dan sistem bisnis.
+                </p>
+
+                <p>
+                    Salah satu penerapan yang mudah ditemukan
+                    dalam kehidupan sehari-hari adalah SaaS,
+                    seperti aplikasi kasir digital Moka POS.
+                    Dengan aplikasi tersebut, usaha kuliner
+                    dapat mengelola transaksi dan memantau
+                    penjualan secara lebih praktis.
+                </p>
+
+                <p>
+                    Selain itu, cloud juga dapat digunakan
+                    untuk menghosting website melalui layanan
+                    infrastruktur seperti Amazon EC2, Google
+                    Compute Engine, maupun Azure Virtual Machines.
+                    Untuk website sederhana, platform hosting
+                    seperti GitHub Pages, Netlify, dan Vercel
+                    juga dapat dimanfaatkan.
+                </p>
+
+                <p>
+                    Melalui materi ini, kita dapat memahami
+                    bahwa cloud computing memiliki peran
+                    penting dalam mendukung kegiatan bisnis,
+                    pengembangan aplikasi, dan kebutuhan
+                    teknologi informasi saat ini.
+                </p>
+            </div>
+
+            <a href="#daftar-materi" class="back-top">
+                ↑ Kembali ke daftar pertemuan
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Naufal. All Rights Reserved.</p>
+        <p>Personal Website | Resume Komputasi Awan</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT NAVBAR -->
+    <script src="script.js"></script>
+
+</body>
+</html>
